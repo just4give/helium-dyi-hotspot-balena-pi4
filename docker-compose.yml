@@ -1,7 +1,7 @@
 version: '2'
 services:
   gateway:
-    build: ./gateway
+    build: ./pigateway
     privileged: true
     restart: always
     
