@@ -1,0 +1,13 @@
+version: '2'
+services:
+  gateway:
+    build: ./gateway
+    privileged: true
+    restart: always
+    
+  miner:
+    build: ./miner
+    ports:
+      - "44158:44158"
+      - "1680:1680/udp"
+  
