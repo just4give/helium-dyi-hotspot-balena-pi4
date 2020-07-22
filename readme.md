@@ -15,6 +15,7 @@
 - Mac or Windows ( I tested on Mac ) 
 - BalenaEtcher to flash image [download](https://www.balena.io/etcher/)
 - Balena CLI  [install](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
+- jq [install](https://stedolan.github.io/jq/download/)
 
 #### Let's get started 
 As you got your hardwares and softwares let's get started and turn your Pi into a helium hotspot 
