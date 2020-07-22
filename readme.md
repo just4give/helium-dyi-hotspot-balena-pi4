@@ -14,6 +14,7 @@
 - Free Balena Cloud account [link](https://dashboard.balena-cloud.com/login)
 - Mac or Windows ( I tested on Mac ) 
 - BalenaEtcher to flash image [download](https://www.balena.io/etcher/)
+- Balena CLI  [install](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 
 #### Let's get started 
 As you got your hardwares and softwares let's get started and turn your Pi into a helium hotspot 
@@ -34,15 +35,62 @@ Turn on "Wifi+Ethernet" and put your wifi credential there. After that click on 
 Next, click on Environment variable menu from left pane and create a new variable as "REGION" with value "US915" (you may need to change as per your region) 
 <img width="1170" alt="Screen Shot 2020-07-22 at 11 19 30 AM" src="https://user-images.githubusercontent.com/9275193/88194802-3ab80100-cc0d-11ea-96ba-7f158328da04.png">
 
-##### Step 1: Flash image on SD card
+##### Step 2: Flash image on SD card
+Plug micro SD card into your computer. Open balenaEtcher software, select the downloaded zip file from your computer and select the SD card to format and click on "Flash" 
+
+<img width="794" alt="Screen Shot 2020-07-22 at 11 26 22 AM" src="https://user-images.githubusercontent.com/9275193/88195598-37714500-cc0e-11ea-9d8e-84e89dbe65e0.png">
+
+Once completed, unplug SD card from your computer and insert in your Raspberry Pi and power up your Pi. In about 20-30 seconds your device should appear on balena cloud application as below.
+
+<img width="1021" alt="Screen Shot 2020-07-22 at 11 34 12 AM" src="https://user-images.githubusercontent.com/9275193/88196518-486e8600-cc0f-11ea-9179-933ccc66e602.png">
+
+Very exciting so far! Isn't is? 
+
+##### Step 3: Deploy helium miner and gateway to balena
+
+Now the fun begins. Stack your RAK2245 HAT on your Pi. From balena cloud , generate a session token ( Preferences -> Access Tokens ) 
+
+Next, clone this repo somewhere on your computer
+
+```
+git clone https://github.com/just4give/helium-dyi-hotspot-balena-pi4  && cd helium-dyi-hotspot-balena-pi4
+```
+
+Next log into balena cli
+
+```
+balena login
+```
+
+Choose "Authetication Token" from the list. This will ask you to enter the token you grabbed from balena cloud website. Paste and hit enter. You should receive successful login message.
+
+<img width="936" alt="Screen Shot 2020-07-22 at 11 45 08 AM" src="https://user-images.githubusercontent.com/9275193/88197982-31c92e80-cc11-11ea-9e76-dd0143b07778.png">
+
+
+Next, issue below commands one by one
+
+```
+chmod +x build.sh
+./build.sh
+balena push helium_diy_hotspot_pi4
+```
+Please note - the command is balena push <application_name>. If you have used different name in step 1, then use that. 
+
+If everything goes fine, you will see a nice unicorn :) 
+
+<img width="814" alt="Screen Shot 2020-07-22 at 11 54 55 AM" src="https://user-images.githubusercontent.com/9275193/88198879-2d514580-cc12-11ea-9a84-7b7e97f0eb4d.png">
+
+
+
+
+
 
 
 
 Name      	  	   | Value  
 ------------------|--------------------------  
 REGION            | US915, EU868. Default US915
-MINER_IP          | Your own miner IP. Default localhost
 
 
-<img width="902" alt="Screen Shot 2020-07-20 at 11 16 24 AM" src="https://user-images.githubusercontent.com/9275193/87955025-2b08b300-ca7b-11ea-8cf8-f0d619b416b7.png">
+
 
