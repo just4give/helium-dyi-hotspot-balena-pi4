@@ -100,8 +100,8 @@ I like to thank Marc from Balena and [PastaGringo](https://github.com/PastaGring
 
 
 ## References
-Helium Developer Website [hotspot](https://developer.helium.com/hotspot/developer-setup)
-Balena Multi-container [link](https://www.balena.io/blog/two-projects-one-device-turn-your-raspberry-pi-into-a-multitool/)
+- Helium Developer Website [hotspot](https://developer.helium.com/hotspot/developer-setup)
+- Balena Multi-container [link](https://www.balena.io/blog/two-projects-one-device-turn-your-raspberry-pi-into-a-multitool/)
 
 
 
