@@ -32,7 +32,7 @@ Once the application is created, it will take you to the application page. You n
 Click on "Add device" button which will open below modal. 
 <img width="931" alt="Screen Shot 2020-07-22 at 11 14 44 AM" src="https://user-images.githubusercontent.com/9275193/88194295-a9488f00-cc0c-11ea-95df-1a5d50ccf483.png">
 Turn on "Wifi+Ethernet" and put your wifi credential there. After that click on "Download BalenaOS" button which will download a zip file on your comuter.
-Next, click on Environment variable menu from left pane and create a new variable as "REGION" with value "US915" (you may need to change as per your region) 
+Next, click on Environment variable menu from left pane and create a new variable as "REGION" with value "US915" (you may need to change as per your region. This repo supports US915 and EU868. Please create PR if with your region) 
 <img width="1170" alt="Screen Shot 2020-07-22 at 11 19 30 AM" src="https://user-images.githubusercontent.com/9275193/88194802-3ab80100-cc0d-11ea-96ba-7f158328da04.png">
 
 ##### Step 2: Flash image on SD card
@@ -80,16 +80,25 @@ If everything goes fine, you will see a nice unicorn :)
 
 <img width="814" alt="Screen Shot 2020-07-22 at 11 54 55 AM" src="https://user-images.githubusercontent.com/9275193/88198879-2d514580-cc12-11ea-9a84-7b7e97f0eb4d.png">
 
+And in few minutes, both gateway and miner will be distrubuted to your device. You should see some logs like. Now if you have a LoRa node, test it out.  
+
+```
+22.07.20 12:05:36 (-0400)  gateway  INFO: [up] PUSH_ACK received in 0 ms
+22.07.20 12:05:40 (-0400)  gateway  INFO: [down] PULL_ACK received in 0 ms
+```
+
+<img width="1387" alt="Screen Shot 2020-07-22 at 12 04 04 PM" src="https://user-images.githubusercontent.com/9275193/88199960-75bd3300-cc13-11ea-9b8d-a62f9551d183.png">
+
+#### Troubleshooting
+- If you are not on Mac, you may see some issue running `build.sh` file. If so , remove `''` from `sed` command. 
 
 
 
+## Special Thanks
+I like to thank Marc from Balena and [PastaGringo](https://github.com/PastaGringo). They are the creators of the multi conatiner docker images which I reused. 
 
 
 
-
-Name      	  	   | Value  
-------------------|--------------------------  
-REGION            | US915, EU868. Default US915
 
 
 
