@@ -7,7 +7,7 @@ services:
     
   miner:
     restart: always
-    image: quay.io/team-helium/miner:miner-arm64_2020.07.16.0_GA
+    image: quay.io/team-helium/miner:MINER_TAG
     ports:
       - "44158:44158/tcp"
       - "1680:1680/udp"
