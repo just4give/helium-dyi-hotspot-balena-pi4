@@ -17,7 +17,7 @@
 - Balena CLI  [install](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - jq [install](https://stedolan.github.io/jq/download/)
 
-#### Let's get started 
+## Let's get started 
 As you got your hardwares and softwares let's get started and turn your Pi into a helium hotspot 
 
 ##### Step 1: Prepare image with balenaOS
