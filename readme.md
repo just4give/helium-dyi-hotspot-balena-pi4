@@ -25,6 +25,16 @@ Log into balena cloud website and click on "Create Application" button
 This wil bring a modal window as below. Type a name as you desire, choose device type as "Raspberry Pi 4" , application type as "Starter" and hit "Create new application" button.
 <img width="715" alt="Screen Shot 2020-07-22 at 11 09 00 AM" src="https://user-images.githubusercontent.com/9275193/88193522-c3ce3880-cc0b-11ea-913a-39b6214a310a.png">
 
+Once the application is created, it will take you to the application page. You need to add a device now. 
+<img width="717" alt="Screen Shot 2020-07-22 at 11 12 22 AM" src="https://user-images.githubusercontent.com/9275193/88193952-3b9c6300-cc0c-11ea-88e1-6f209b1cee30.png">
+
+Click on "Add device" button which will open below modal. 
+<img width="931" alt="Screen Shot 2020-07-22 at 11 14 44 AM" src="https://user-images.githubusercontent.com/9275193/88194295-a9488f00-cc0c-11ea-95df-1a5d50ccf483.png">
+Turn on "Wifi+Ethernet" and put your wifi credential there. After that click on "Download BalenaOS" button which will download a zip file on your comuter.
+Next, click on Environment variable menu from left pane and create a new variable as "REGION" with value "US915" (you may need to change as per your region) 
+<img width="1170" alt="Screen Shot 2020-07-22 at 11 19 30 AM" src="https://user-images.githubusercontent.com/9275193/88194802-3ab80100-cc0d-11ea-96ba-7f158328da04.png">
+
+##### Step 1: Flash image on SD card
 
 
 
