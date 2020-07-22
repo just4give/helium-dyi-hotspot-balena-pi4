@@ -99,6 +99,9 @@ And in few minutes, both gateway and miner will be distrubuted to your device. Y
 I like to thank Marc from Balena and [PastaGringo](https://github.com/PastaGringo). They are the creators of the multi conatiner docker images which I reused. 
 
 
+## References
+Helium Developer Website [hotspot](https://developer.helium.com/hotspot/developer-setup)
+Balena Multi-container [link](https://www.balena.io/blog/two-projects-one-device-turn-your-raspberry-pi-into-a-multitool/)
 
 
 
