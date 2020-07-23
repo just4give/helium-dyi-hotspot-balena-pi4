@@ -12,7 +12,7 @@
 
 #### Sowftwares you need
 - Free Balena Cloud account [link](https://dashboard.balena-cloud.com/login)
-- Mac or Windows ( I tested on Mac ) 
+- Mac or Windows ( I tested on Windows10 ) 
 - BalenaEtcher to flash image [download](https://www.balena.io/etcher/)
 - Balena CLI  [install](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - jq [install](https://stedolan.github.io/jq/download/)
@@ -63,7 +63,7 @@ Next log into balena cli
 balena login
 ```
 
-Choose "Authetication Token" from the list. This will ask you to enter the token you grabbed from balena cloud website. Paste and hit enter. You should receive successful login message.
+Choose "Web Authorization" from the list.You will be redirected to a webpage . Press authorize. You can close the window and come back to the console. You should receive successful login message there.
 
 <img width="936" alt="Screen Shot 2020-07-22 at 11 45 08 AM" src="https://user-images.githubusercontent.com/9275193/88197982-31c92e80-cc11-11ea-9e76-dd0143b07778.png">
 
@@ -72,7 +72,7 @@ Next, issue below commands one by one
 
 ```
 chmod +x build.sh
-./build.sh
+sh build.sh
 balena push helium_diy_hotspot_pi4
 ```
 Please note - the command is balena push <application_name>. If you have used different name in step 1, then use that. 
@@ -92,6 +92,17 @@ And in few minutes, both gateway and miner will be distrubuted to your device. Y
 
 #### Troubleshooting
 - If you are not on Mac, you may see some issue running `build.sh` file. If so , remove `''` from `sed` command. 
+- If you are on Windows and are unable to build the run the bash script 'build.sh':
+    - First check the sed version using the command ``` sed --version ```
+    - If GNU sed version 3.02 is the version installed it wont support the -i option for sed, so update to the latest version of sed and try running it.
+    - Or replace the contents of the 'build.sh' file with the following one:
+    ``` #!/bin/bash
+
+        cp docker-compose-template.yml docker-compose.yml 
+        export MINER_TAG=$(curl -s 'https://quay.io/api/v1/repository/team-helium/miner/tag/?limit=100&page=1&onlyActiveTags=true' | jq -c '[ .tags[] | select( .name |       contains("arm")) ][0].name' | cut -d'"' -f2)
+        sed.exe s/MINER_TAG/$MINER_TAG/g docker-compose.yml > docker-temp.yml
+        cp docker-temp.yml docker-compose.yml
+    ```
 
 
 
