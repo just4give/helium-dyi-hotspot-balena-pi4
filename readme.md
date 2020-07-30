@@ -90,6 +90,13 @@ And in few minutes, both gateway and miner will be distrubuted to your device. Y
 
 <img width="1387" alt="Screen Shot 2020-07-22 at 12 04 04 PM" src="https://user-images.githubusercontent.com/9275193/88199960-75bd3300-cc13-11ea-9b8d-a62f9551d183.png">
 
+#### Enable GPS
+
+You need to activate UART and modify `dtoverlay` varible. Go to "Device Configuration" tab from left menu and modify dtoverlay value to pi3-disable-bt and activate UART.
+
+<img width="1652" alt="Screen Shot 2020-07-30 at 1 53 11 PM" src="https://user-images.githubusercontent.com/9275193/88957240-9406dc80-d26c-11ea-9f52-846ec39db629.png">
+
+
 #### Troubleshooting
 - If you are not on Mac, you may see some issue running `build.sh` file. If so , remove `''` from `sed` command. 
 
