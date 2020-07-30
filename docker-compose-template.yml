@@ -1,13 +1,12 @@
-version: '2'
+version: "2.1"
 services:
-  gateway:
-    build: ./pigateway
+  loragtwpktfwd:
+    restart: always
+    image: pastagringo/loragtwpktfwd
     privileged: true
+  helium_miner:
     restart: always
-    
-  miner:
-    restart: always
-    image: quay.io/team-helium/miner:MINER_TAG
+    image: quay.io/team-helium/miner:miner-arm64_2020.07.17.0_GA
     ports:
       - "44158:44158/tcp"
       - "1680:1680/udp"
@@ -15,7 +14,8 @@ services:
       - 'miner-data:/var/data'
       - 'miner-log:/var/log/miner'
     environment:
-      - 'REGION_OVERRIDE=IN865'
+      - 'REGION_OVERRIDE=EU868'
+
 volumes:
   miner-data:
-  miner-log: 
+  miner-log:
