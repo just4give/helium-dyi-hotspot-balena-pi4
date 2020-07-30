@@ -14,7 +14,7 @@ services:
       - 'miner-data:/var/data'
       - 'miner-log:/var/log/miner'
     environment:
-      - 'REGION_OVERRIDE=EU868'
+      - 'REGION_OVERRIDE=IN865'
 
 volumes:
   miner-data:
