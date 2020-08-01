@@ -1,5 +1,5 @@
 {
-	"SX1301_conf": {
+    "SX1301_conf": {
 		"lorawan_public": true,
 		"clksrc": 1,
 		"clksrc_desc": "radio_1 provides clock to concentrator for most devices except MultiTech. For MultiTech set to 0.",
@@ -196,5 +196,5 @@
 		"gps_tty_path": "/dev/ttyAMA0",
 		"gps": true
 	}
-
+	
 }
