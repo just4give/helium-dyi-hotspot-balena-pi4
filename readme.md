@@ -17,9 +17,6 @@
 - Balena CLI  [install](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - jq [install](https://stedolan.github.io/jq/download/)
 
-## Deploy with Balena Button
-[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
-
 ## Let's get started 
 As you got your hardwares and softwares let's get started and turn your Pi into a helium hotspot 
 
@@ -49,6 +46,13 @@ Once completed, unplug SD card from your computer and insert in your Raspberry P
 <img width="1021" alt="Screen Shot 2020-07-22 at 11 34 12 AM" src="https://user-images.githubusercontent.com/9275193/88196518-486e8600-cc0f-11ea-9179-933ccc66e602.png">
 
 Very exciting so far! Isn't is? 
+
+## Deploy with Balena Button
+- Now if you want to deploy the Helium Hotspot for IN865 region you can simply do it by clicking on the button below. 
+
+[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
+
+- But if you want to deploy it for any other region move to the next step.
 
 ##### Step 3: Deploy helium miner and gateway to balena
 
