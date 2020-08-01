@@ -47,7 +47,7 @@ Once completed, unplug SD card from your computer and insert in your Raspberry P
 
 Very exciting so far! Isn't is? 
 
-## Deploy with Balena Button
+#### Deploy with Balena Button
 - Now if you want to deploy the Helium Hotspot for IN865 region you can simply do it by clicking on the button below. 
 
 [![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
