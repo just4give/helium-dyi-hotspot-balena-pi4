@@ -193,13 +193,8 @@
 		"forward_crc_error": false,
 		"forward_crc_disabled": false,
 		/* gps enable */
-		"gps": true,
 		"gps_tty_path": "/dev/ttyAMA0",
-		"fake_gps": false,
-		/* GPS reference coordinates */
-		"ref_latitude": 0.0,
-		"ref_longitude": 0.0,
-		"ref_altitude": 0
+		"gps": true
 	}
 
 }
