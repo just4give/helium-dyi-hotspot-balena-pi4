@@ -100,6 +100,14 @@ You need to activate UART and modify `dtoverlay` varible. Go to "Device Configur
 #### Troubleshooting
 - If you are not on Mac, you may see some issue running `build.sh` file. If so , remove `''` from `sed` command. 
 
+## How to upgrade miner
+Execute below commands from the repo. This will fetch the latest miner image from the hub.
+
+```
+rm docker-compose.yml
+./build.sh
+balena push helium_diy_hotspot_pi4
+```
 
 
 ## Special Thanks
