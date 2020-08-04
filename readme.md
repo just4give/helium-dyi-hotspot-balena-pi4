@@ -47,6 +47,13 @@ Once completed, unplug SD card from your computer and insert in your Raspberry P
 
 Very exciting so far! Isn't is? 
 
+#### Deploy with Balena Button
+- Now if you want to deploy the Helium Hotspot for IN865 region you can simply do it by clicking on the button below. 
+
+[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
+
+- But if you want to deploy it for any other region move to the next step.
+
 ##### Step 3: Deploy helium miner and gateway to balena
 
 Now the fun begins. Stack your RAK2245 HAT on your Pi. From balena cloud , generate a session token ( Preferences -> Access Tokens ) 
