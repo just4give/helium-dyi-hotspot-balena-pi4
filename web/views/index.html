@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Welcome to balena!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <style>
+    .s-circle{
+      background-color: purple;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      font-weight: normal;
+      color: white;
+      font-size: x-large;
+    }
+    .s-circle.green{
+      background-color: green;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class = "container">
+    <div class = "margin-top-10  column col-6 p-centered">
+      
+      <img class="img-responsive" src="banner.jpg">
+      <h1 class="text-center" style="color: #55a1d9">Your DIY Hotspot</h1>
+      <p class="text-center">This is work in progress. You will see some useful metrics here soon.</p>
+      <div class="divider text-center" data-content="DASHBOARD"></div>
+      <div class="columns">
+
+        <div class="column col-6 text-center" >
+          
+          <div class="s-circle"><%= bh %></div>
+        
+        </div>
+        <div class="column col-6 text-center" >
+          
+          <div class="s-circle green">0</div>
+        
+        </div>
+
+      </div>
+      <div class="divider text-center" data-content="Block Heigh Helium Vs Hotspot"></div>
+      <a href="/swarm_key">Download Swarm Key</a>
+      
+  </div>
+</body>
+</html>

@@ -90,7 +90,7 @@ And in few minutes, both gateway and miner will be distrubuted to your device. Y
 
 <img width="1387" alt="Screen Shot 2020-07-22 at 12 04 04 PM" src="https://user-images.githubusercontent.com/9275193/88199960-75bd3300-cc13-11ea-9b8d-a62f9551d183.png">
 
-#### Enable GPS
+## How to enable GPS
 
 You need to activate UART and modify `dtoverlay` varible. Go to "Device Configuration" tab from left menu and modify dtoverlay value to pi3-disable-bt and activate UART.
 
@@ -99,6 +99,18 @@ You need to activate UART and modify `dtoverlay` varible. Go to "Device Configur
 
 #### Troubleshooting
 - If you are not on Mac, you may see some issue running `build.sh` file. If so , remove `''` from `sed` command. 
+- If you are on Windows and are unable to build the run the bash script 'build.sh':
+    - First check the sed version using the command ``` sed --version ```
+    - If GNU sed version 3.02 is the version installed it wont support the -i option for sed, so update to the latest version of sed and try running it.
+    - Or replace the contents of the 'build.sh' file with the following one:
+    
+    ``` #!/bin/bash
+
+    cp docker-compose-template.yml docker-compose.yml 
+    export MINER_TAG=$(curl -s 'https://quay.io/api/v1/repository/team-helium/miner/tag/?limit=100&page=1&onlyActiveTags=true' | jq -c '[ .tags[] | select( .namecontains("arm")) ][0].name' | cut -d'"' -f2)
+    sed.exe s/MINER_TAG/$MINER_TAG/g docker-compose.yml > docker-temp.yml
+    cp docker-temp.yml docker-compose.yml
+    ```
 
 ## How to upgrade miner
 Execute below commands from the repo. This will fetch the latest miner image from the hub.
@@ -108,6 +120,11 @@ rm docker-compose.yml
 ./build.sh
 balena push helium_diy_hotspot_pi4
 ```
+
+## Dashboard
+Open your browser and navigate to http://<Your_Device_IP>. This is work in progress. You will see some useful metrics and can download swam key easily for backup. 
+
+<img width="725" alt="Screen Shot 2020-08-04 at 3 20 13 PM" src="https://user-images.githubusercontent.com/9275193/89336220-0a3d8180-d667-11ea-895b-7efdb7b289af.png">
 
 
 ## Special Thanks

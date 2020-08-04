@@ -16,6 +16,17 @@ services:
       - 'miner-log:/var/log/miner'
     environment:
       - 'REGION_OVERRIDE=US915'
+    
+  web:
+    build: ./web
+    privileged: true
+    restart: always
+    ports: 
+      - "80:80"
+    volumes:
+      - 'miner-data:/var/data'
+      - 'miner-log:/var/log/miner'
+    
 volumes:
   miner-data:
   miner-log: 
