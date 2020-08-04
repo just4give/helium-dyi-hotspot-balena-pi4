@@ -26,4 +26,4 @@ RUN /build/lora_gateway/reset_lgw.sh start 17
 COPY start.sh .
 RUN chmod +x start.sh
 
-ENTRYPOINT ["sudo ./start.sh"]
+ENTRYPOINT ["./start.sh"]
