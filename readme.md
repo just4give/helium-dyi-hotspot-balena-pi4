@@ -90,7 +90,9 @@ And in few minutes, both gateway and miner will be distrubuted to your device. Y
 
 <img width="1387" alt="Screen Shot 2020-07-22 at 12 04 04 PM" src="https://user-images.githubusercontent.com/9275193/88199960-75bd3300-cc13-11ea-9b8d-a62f9551d183.png">
 
-## How to enable GPS
+## How to enable GPS (Optional)
+
+GPS is not a hard requirement to run your DIY hotspot. So you may entirely skip GPS setup. Make sure in global config JSON file GPS is set to false.
 
 You need to activate UART and modify `dtoverlay` varible. Go to "Device Configuration" tab from left menu and modify dtoverlay value to pi3-disable-bt and activate UART.
 
