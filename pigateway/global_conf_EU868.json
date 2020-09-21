@@ -182,6 +182,6 @@
         "forward_crc_error": false,
         "forward_crc_disabled": false,
         "gps_tty_path": "/dev/ttyAMA0",
-        "gps": true
+        "gps": false
     }
 }
