@@ -10,12 +10,20 @@
 - 64GB Micro SD card [link](https://www.amazon.com/gp/product/B07NY4L4VZ)
 - RAK2245 Pi HAT [link](https://www.amazon.com/gp/product/B085W5ZL4F) While purchasing please check frequency of your country.
 
-#### Sowftwares you need
+#### Softwares you need
 - Free Balena Cloud account [link](https://dashboard.balena-cloud.com/login)
 - Mac or Windows ( I tested on Mac ) 
 - BalenaEtcher to flash image [download](https://www.balena.io/etcher/)
 - Balena CLI  [install](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - jq [install](https://stedolan.github.io/jq/download/)
+
+## Deploy with balena
+
+Running Helium on [balenaCloud](https://balena.io) is a breeze. Just click the Deploy with balena button below:
+
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/just4give/helium-dyi-hotspot-balena-pi4/)
+
+Alternatively, you can install manually on balenaCloud using the instructions below.
 
 ## Let's get started 
 As you got your hardwares and softwares let's get started and turn your Pi into a helium hotspot 
