@@ -5,7 +5,7 @@ type: "sw.application"
 assets:
   - url: "https://github.com/just4give/helium-dyi-hotspot-balena-pi4/"
     name: "repository"
-  - url: "https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/lfgcsr51vcn6u8p1obdt"
+  - url: "https://raw.githubusercontent.com/just4give/helium-dyi-hotspot-balena-pi4/master/web/img/logo.jpg"
     name: "logo"
 data:
   description: "Helium DIY Hotspot for the Raspberry Pi"
