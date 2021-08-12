@@ -1,4 +1,4 @@
-version: "2"
+version: "2.0.0"
 slug: "helium-dyi-hotspot-balena-pi4"
 name: "Helium DIY Hotspot for Raspberry Pi"
 type: "sw.application"
