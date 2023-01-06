@@ -1,3 +1,5 @@
+[![Twitter](https://img.shields.io/twitter/url.svg?label=Follow%20%40tweetmithund&style=social&url=https%3A%2F%2Ftwitter.com%2Ftweetmithund)](https://twitter.com/tweetmithund)
+
 ## UPDATE: 04/11/2021 : [copied from helium discord] Any new DIY will not earn HNT. If you build a DIY packet forwarder today, it will only transfer data on the Helium network. There is no plan to resume the alpha program. If you would like to earn HNT, please visit helium.com/mine.
 
 ## Build your own helium hotspot ( miner + packet forwader ) on Raspberry pi 4 using BalenaOS
